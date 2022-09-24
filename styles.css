@@ -1,0 +1,238 @@
+
+body{
+    background: linear-gradient(to left top, pink, orange) fixed;
+    color: #212529;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    min-height: 10vh;
+}
+button{
+    padding:0;
+    margin:0;
+}
+
+.container {
+    width:60%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4em 23em 5em 5em;
+    gap: 1em;
+    justify-content: center;
+}
+
+.rotate, 
+.rotate > h1,
+.x,
+.x>img{
+    display:none;
+    visibility: hidden;
+}
+
+.topbox{
+    grid-column: span 2;
+    width:100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 0.5em;
+    background: white;
+    user-select: none;
+    -webkit-user-select: none; /* Safari fallback only */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    font-family: 'Roboto', sans-serif;
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    border-radius: 0.5em;
+    background: white;
+    user-select: none;
+    -webkit-user-select: none; /* Safari fallback only */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    font-family: 'Roboto', sans-serif;
+}
+
+.text{
+    grid-column: span 4;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.55rem;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    user-select: none;
+    align-items:center;
+}
+
+.box{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    font-size: 2rem;
+    background: white;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkered45 {
+  background-size: 50px 50px;
+  background-image: linear-gradient( 45deg, #000099 25%, transparent 25%, transparent),
+                    linear-gradient(-45deg, #000099 25%, transparent 25%, transparent),
+                    linear-gradient( 45deg, transparent 75%, #000099 75%),
+                    linear-gradient(-45deg, transparent 75%, #000099 75%)
+    /*https://codepen.io/lloeki/pen/Dvkqw*/
+}
+
+/*first 3 make the top corners show card numbers, red and black set a class for the card*/
+.card::before,
+.card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 2.5rem;
+}
+.card::before {
+    top: 0.5em;
+    left: 0.5em;
+}
+
+.card::after {
+    bottom: 0.5em;
+    right: 0.5em;
+    transform: rotate(180deg);
+}
+
+.card.red{
+    color:red;
+}
+
+.card.black{
+    color:black;
+}
+
+@media screen and (min-width: 400px) {
+    
+    .container{
+        width:95%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    
+    .container{
+        width:85%;
+    }
+}
+@media screen and (min-width: 1100px) {
+    
+    .container{
+        width:80%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    
+    .container{
+        width:75%;
+    }
+}
+@media screen and (min-width: 1300px) {
+    
+    .container{
+        width:70%;
+    }
+}
+@media screen and (min-width: 1400px) {
+    
+    .container{
+        width:65%;
+    }
+}
+@media (orientation: landscape) and (min-width:300px) and (max-width:1000px){
+    .container {
+        width: 60%;
+        grid-template-rows: 3em 15em 3em 3em;
+        margin: 20px auto;
+        gap: 0.5rem;
+    }
+    .card{
+        font-size: 3rem;
+    }
+    .card:before, .card:after{
+        font-size: 1.5rem;
+    }
+    .text, .box{
+        font-size: 1.5rem;
+    }
+    .one{
+        font-size: 1rem;
+    }
+}
+@media (orientation: landscape) and (min-width: 1000px) and (max-width:1200px){
+    .container {
+        width: 60%;
+        grid-template-rows: 5em 20em 5em 5em;
+        margin:150px auto;
+        gap:0.5rem;
+    }
+    .card{
+        font-size: 5rem;
+    }
+    .card:before, .card:after{
+        font-size: 2.5rem;
+    }
+    .text{
+        font-size: 2.5rem
+    }
+}
+
+@media screen and (max-width:1500px) and (orientation: portrait){
+
+    .rotate, 
+    .rotate > h1,
+    .x,
+    .x>img
+    {
+        display:block;
+        visibility: visible;
+    }
+    
+    .rotate{
+        background-color: beige;
+        opacity: .95;
+        width:90%;
+        margin:auto;
+        right:0%;
+        left:0%;
+        position: absolute;
+        top: 50px;
+        z-index: 9;
+    }
+    .rotate > h1{
+        text-align: center;
+    }
+    .x{
+        position: absolute;
+        top:5px;
+        right:5px;
+    }
+    .x > img{
+        width:35px;
+    }
+}

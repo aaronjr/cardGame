@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Card game</title>
+    </head>
+<body>
+    <div class="rotate">
+        <h1>This game works best in landscape mode.</h1>
+        <div class="x"><img id="cross" src="close.png"></div>
+    </div>
+
+    <div class="container">
+
+        <div class="topbox" id="remain" data-value="" name="remain"></div>
+        <div class="topbox" id="drink" data-value="" name="sips"></div>
+
+        <div class="card" id="card1" data-value=""></div>
+        <div class="card" id="card2" data-value=""></div>
+        <div class="card" id="card3" data-value=""></div>
+        <div class="card" id="card4" data-value=""></div>
+
+        <div class="text" id="text"></div>
+
+        <button class="box" id="box1" data-value=""></button>
+        <button class="box" id="box2" data-value=""></button>
+        <button class="box" id="box3" data-value=""></button>
+        <button class="box" id="box4" data-value=""></button>
+
+    </div>
+
+    <script src="cardgame.js"></script>
+</body>
+</html>
