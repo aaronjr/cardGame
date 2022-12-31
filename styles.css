@@ -39,7 +39,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 0.5em;
     background: white;
     user-select: none;
@@ -162,6 +162,7 @@ body{
     
     .container{
         width:65%;
+        grid-template-rows: 4em 19em 5em 5em;
     }
 }
 @media (orientation: landscape) and (min-width:300px) and (max-width:1000px){
