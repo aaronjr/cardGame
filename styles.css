@@ -11,7 +11,7 @@ body{
     place-items: center;
     color: #212529;
     line-height: 1.5;
-    height: 100vh;
+    height: 80vh;
 }
 
 .container {
@@ -236,7 +236,7 @@ body{
 @media (orientation: landscape) and (min-width: 750px) and (max-width: 1000px){
     
     .container {
-        width: 60%;
+        width: 70%;
         grid-template-rows: 3em 12em 2em 2em;
         gap: 0.5rem;
     }
@@ -246,7 +246,8 @@ body{
     .card:before, .card:after{
         font-size: 1rem;
     }
-    .text, .box{
+    .text, 
+    .box{
         font-size: 1rem;
     }
     .one{
