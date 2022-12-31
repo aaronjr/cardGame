@@ -233,7 +233,7 @@ body{
     }
 }
 
-@media (orientation: landscape) and (min-width: 750px) and (max-width: 1000px){
+@media (orientation: landscape) and (min-width: 550px) and (max-width: 1000px){
     
     .container {
         width: 70%;
