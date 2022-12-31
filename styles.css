@@ -7,14 +7,15 @@
     margin:0px;
 }
 body{
-   
+    display: grid;
+    place-items: center;
     color: #212529;
     line-height: 1.5;
+    height: 100vh;
 }
 
 .container {
     width:60%;
-    margin: 5rem auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 4em 23em 5em 5em;
@@ -134,6 +135,7 @@ body{
         width:95%;
     }
 }
+
 @media screen and (min-width: 1000px) {
     
     .container{
@@ -164,7 +166,6 @@ body{
     .container {
         width: 60%;
         grid-template-rows: 3em 15em 3em 3em;
-        margin: 20px auto;
         gap: 0.5rem;
     }
     .card{
@@ -184,7 +185,6 @@ body{
     .container {
         width: 60%;
         grid-template-rows: 5em 20em 5em 5em;
-        margin:150px auto;
         gap:0.5rem;
     }
     .card{
@@ -230,5 +230,26 @@ body{
     }
     .x > img{
         width:35px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 750px) and (max-width: 1000px){
+    
+    .container {
+        width: 60%;
+        grid-template-rows: 3em 12em 2em 2em;
+        gap: 0.5rem;
+    }
+    .card{
+        font-size: 1rem;
+    }
+    .card:before, .card:after{
+        font-size: 1rem;
+    }
+    .text, .box{
+        font-size: 1rem;
+    }
+    .one{
+        font-size: 1rem;
     }
 }
