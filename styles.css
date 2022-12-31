@@ -241,10 +241,10 @@ body{
         gap: 0.5rem;
     }
     .card{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .card:before, .card:after{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .text, 
     .box{
